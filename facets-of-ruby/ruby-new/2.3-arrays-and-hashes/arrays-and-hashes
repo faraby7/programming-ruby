@@ -1,0 +1,13 @@
+Both store collections of objects accessible using a key and they hold objects of differing types
+
+Array they key is an integer
+Hashes support any object as a key
+
+Arrays is  more efficient to access array element
+Hash provide more flexibility
+
+Note : nil is an object just like any others
+and nil means false when used in the conditional expressions
+
+Ruby hashes are similar to arrays jut must supply two objects for every entry
+	key => value

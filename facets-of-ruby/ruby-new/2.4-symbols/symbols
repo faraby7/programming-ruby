@@ -1,0 +1,6 @@
+Ruby offers a cleaner alternative. Symbols are simply constant names.
+that are guaranteed to be unique. A symbol literal starts with colon followed by the name.
+
+no need to assign some kind of value to symbol the ruby takes care of that for you and Ruby also guarantees taht no matter where it appears n your program
+
+Symbols are frequently used as keys in hashes 
