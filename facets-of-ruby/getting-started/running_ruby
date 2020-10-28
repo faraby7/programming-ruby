@@ -1,0 +1,38 @@
+-Let's test to see whether Ruby is installed.
+
+	C:\Users\Yusuf>ruby -v
+	ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32]
+
+##Interactive Ruby
+
+You can't really see what's going on as you type
+
+	C:\Users\Yusuf>ruby
+	puts "Hello, World!"
+	^D
+	Hello, World!
+
+	C:\Users\Yusuf>
+
+irb -interactive Ruby-
+
+	$ irb
+	2.0.0 :001 > def sum(n1, n2)
+	2.0.0 :002?> n1 + n2
+	2.0.0 :003?> end
+	=> nil
+	2.0.0 :004 > sum(3,4)
+	=> 7
+	2.0.0 :005 > sum("cat", "dog")
+	=> "catdog"
+	2.0.0 :006 > exit
+
+You car run a Ruby program from a file as you would any other shell script
+
+	$ ruby myprog.rb
+
+or you can use the "shebang" notation as the first line of the program file
+
+	#!/usr/bin/ruby
+
+Ruby Docuentation RDoc and ri
