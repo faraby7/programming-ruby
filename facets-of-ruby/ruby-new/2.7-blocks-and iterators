@@ -1,0 +1,56 @@
+Code blocks are just chunks of code between braces or between do and end. This is a code block:
+
+{ puts "Hello" }
+
+This is also a code block:
+
+do
+	club.enroll(person)
+	person.socialize
+end
+
+Ruby standard and use braces for SINGLE_LINE blocks
+do/end for multilne blocks.
+
+greet { puts "Hi" }
+verbose_greet("Dave", "loyal customer") { puts "Hi" }
+
+a method can then invoke an associed clock one or more time using ruby yield statement
+you can think of yield as begin something like a method call that invokes the block
+
+def call_block
+	puts "start of method"
+	yield
+	yield
+	puts "end of method"
+end
+
+call_block { puts "In the block" }
+
+produces 
+
+start of method
+In the block
+In the block
+end of method
+==================================================================
+def who_says_what
+	yield("Dave", "hello")
+	yield("Andy", "goodbye")
+end
+
+who_says_what {|person, phrase| puts "#{person} says #{phrase}"}
+
+Dave says hello
+Andy says goodbye
+
+===============================================================
+[ 'cat', 'dog', 'horse' ].each {|name| print name, " " }
+5.times { print "*" }
+3.upto(6) {|i| print i }
+('a'..'e').each {|char| print char }
+puts
+
+cat dog horse *****3456abcde
+
+

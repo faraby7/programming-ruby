@@ -1,0 +1,13 @@
+printf("Number: %5.2f,\nString: %s\n", 1.23, "hello")
+
+Number: 1.23,
+String: hello
+
+you have many ways to read input into your program.Probably the most traditional is to use the method gets
+
+line = gets
+print line
+
+while line = gets
+	print line
+end
