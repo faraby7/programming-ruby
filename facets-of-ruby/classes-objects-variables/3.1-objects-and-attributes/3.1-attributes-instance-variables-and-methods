@@ -1,0 +1,54 @@
+# an attributes is just a method. sometimes an attribute simply returns the value of an instance variable.
+
+Attributes are specific properties of an object. Methods are capabilities of an object.
+
+In Ruby all instance variables (attributes) are private by default. It means you don't have access to them outside the scope of the instance itself. The only way to access the attribute is using an accessor method.
+
+
+class Foo
+  def initialize(color)
+    @color = color
+  end
+end
+
+class Bar
+  def initialize(color)
+    @color = color
+  end
+
+  def color
+    @color
+  end
+end
+
+class Baz
+  def initialize(color)
+    @color = color
+  end
+
+  def color
+    @color
+  end
+
+  def color=(value)
+    @color = value
+  end
+end
+
+f = Foo.new("red")
+f.color # NoMethodError: undefined method ‘color’
+
+b = Bar.new("red")
+b.color # => "red"
+b.color = "yellow" # NoMethodError: undefined method `color=' 
+
+z = Baz.new("red")
+z.color # => "red"
+z.color = "yellow"
+z.color # => "yellow"
+
+Because this is a really commmon behavior, Ruby provides some convenient method to define accessor methods: attr_accessor, attr_writer and attr_reader.
+
+What’s an instance variable?
+
+In the Ruby programming language, an instance variable is a type of variable which starts with an @ symbol.
