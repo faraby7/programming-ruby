@@ -1,0 +1,39 @@
+Variables are used to keep track of objects; each variable holds a reference to an object. 
+
+is a vaiable an object? In Ruby, the answer is "NO" a variable is simply reference to an objects
+
+person1 = "Tim"
+person2 = person1
+person1[0] = 'J'
+puts "person1 is #{person1}"
+puts "person2 is #{person2}"
+produces:
+person1 is Jim
+person2 is Jim
+
+it all comes back to the fact that variables hold references to objects, not the objects themselves and thos case both varaibles refer to the same object
+
+you could avoid aliasing by using the dub method of string, which create a new string object with identical contents
+
+person1 = "Tim"
+person2 = person1.dup
+person1[0] = 'J'
+puts "person1 is #{person1}"
+puts "person2 is #{person2}"
+produces:
+person1 is Jim
+person2 is Tim
+
+
+you can also prevent anyone from changing a particular object by freezing it,
+Attempt to alter a frozen object, and ruby will raise a runtimeerror exception:
+
+
+person1 = "Tim"
+person2 = person1
+person1.freeze # prevent modifications to the object
+person2[0] = "J"
+
+produces:
+from prog.rb:4:in `<main>'
+prog.rb:4:in `[]=': can't modify frozen String (RuntimeError)
